@@ -1,5 +1,5 @@
 import:
-  - ~/dracula.yml
+  - ~/catppuccin/catppuccin-mocha.yml
 
 font:
   normal:
