@@ -49,7 +49,6 @@ local default_plugins = {
 			require("plugins.configs.lspconfig")
 		end,
 	},
-
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
