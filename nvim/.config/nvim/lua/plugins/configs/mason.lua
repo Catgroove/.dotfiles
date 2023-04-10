@@ -1,3 +1,3 @@
 return {
-	ensure_installed = { "lua_ls" }
+	ensure_installed = { "lua_ls", "tsserver" }
 }
