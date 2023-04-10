@@ -36,7 +36,10 @@ local default_plugins = {
 		end,
 	},
 	{
-		"williamboman/mason-lspconfig.nvim"
+		"neovim/nvim-lspconfig",
+		config = function()
+			require "plugins.configs.lspconfig"
+		end,
 	},
 	{
 		"nvim-lualine/lualine.nvim",
