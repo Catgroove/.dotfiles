@@ -60,6 +60,23 @@ local default_plugins = {
 		end,
 	},
 	{
+		"nvim-neo-tree/neo-tree.nvim",
+		tag = "v2.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+		},
+		opts = function()
+			return require("plugins.configs.neo-tree")
+		end,
+		config = function(_, opts)
+			vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+
+			require("neo-tree").setup(opts)
+		end,
+	},
+	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		config = function()
