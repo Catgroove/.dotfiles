@@ -22,3 +22,13 @@ opt.smartcase = true
 
 -- sidebar
 opt.signcolumn = "yes"
+
+-- colors
+opt.termguicolors = true
+
+-- indent
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+opt.smartindent = true
