@@ -1,3 +1,3 @@
 return {
-	ensure_installed = { "lua_ls", "tsserver" }
+	ensure_installed = { "lua-language-server", "stylua", "typescript-language-server", "prettier", "eslint_d" }
 }

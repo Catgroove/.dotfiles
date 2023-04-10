@@ -1,5 +1,5 @@
-require "core.mappings" 
-require "core.lazy"
+require("core.mappings")
+require("core.lazy")
 
 local opt = vim.opt
 
@@ -9,4 +9,3 @@ opt.number = true
 
 -- wrap
 opt.wrap = true
-
