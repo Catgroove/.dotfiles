@@ -1,5 +1,8 @@
 local default_plugins = {
 	{
+		"christoomey/vim-tmux-navigator"
+	},
+	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.1",
 		dependencies = { "nvim-lua/plenary.nvim" },
