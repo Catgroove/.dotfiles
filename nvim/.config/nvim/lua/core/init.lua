@@ -9,3 +9,6 @@ opt.number = true
 
 -- wrap
 opt.wrap = true
+
+-- updatetime
+opt.updatetime = 50

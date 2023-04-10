@@ -2,7 +2,7 @@ return {
 	options = {
 		icons_enabled = true,
 		theme = "auto",
-		component_separators = { left = "", right = "" },
+		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
 			statusline = {},
@@ -19,9 +19,12 @@ return {
 	},
 	sections = {
 		lualine_a = { "mode" },
-		lualine_b = { "branch", "diff", "diagnostics" },
-		lualine_c = { "filename" },
-		lualine_x = { "encoding", "fileformat", "filetype" },
+		lualine_b = { "branch" },
+		lualine_c = {
+			{ "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+			{ "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
+		},
+		lualine_x = { "diagnostics" },
 		lualine_y = { "progress" },
 		lualine_z = { "location" },
 	},
