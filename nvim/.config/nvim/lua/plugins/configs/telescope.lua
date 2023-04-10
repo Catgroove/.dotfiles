@@ -1,4 +1,4 @@
-local options = {
+return {
   defaults = {
     vimgrep_arguments = {
       "rg",
@@ -52,4 +52,3 @@ local options = {
   extensions_list = { "themes", "terms" },
 }
 
-return options

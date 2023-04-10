@@ -11,8 +11,41 @@ local default_plugins = {
 		end,
 
 		config = function(_, opts)
-			local telescope = require "telescope"
-			telescope.setup(opts)
+			require("telescope").setup(opts)
+		end,
+	},
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		opts = function()
+			return require "plugins.configs.treesitter"
+		end,
+
+		config = function(_, opts)
+			require("nvim-treesitter.configs").setup(opts)
+		end,
+	},
+	{
+		"williamboman/mason.nvim",
+		opts = function()
+			return require "plugins.configs.mason"
+		end,
+
+		config = function(_, opts)
+			require("mason").setup(opts)
+		end,
+	},
+	{
+		"williamboman/mason-lspconfig.nvim"
+	},
+	{
+		"nvim-lualine/lualine.nvim",
+		opts = function()
+			return require "plugins.configs.lualine"
+		end,
+
+		config = function(_, opts)
+			require("lualine").setup(opts)
 		end,
 	},
 	{
