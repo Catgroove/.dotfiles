@@ -1,6 +1,10 @@
 local default_plugins = {
+	"christoomey/vim-tmux-navigator",
 	{
-		"christoomey/vim-tmux-navigator",
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
 	},
 	{
 		"nvim-telescope/telescope.nvim",
