@@ -7,7 +7,7 @@ vim.keymap.set("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
 vim.keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
 
 -- neo-tree
-vim.keymap.set("n", "<leader>fe", "<cmd> Neotree toggle <CR>")
+vim.keymap.set("n", "<leader>fe", "<cmd> NvimTreeToggle <CR>")
 
 -- move in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

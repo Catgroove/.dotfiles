@@ -60,20 +60,13 @@ local default_plugins = {
 		end,
 	},
 	{
-		"nvim-neo-tree/neo-tree.nvim",
-		tag = "v2.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons",
-			"MunifTanjim/nui.nvim",
-		},
+		"nvim-tree/nvim-tree.lua",
 		opts = function()
-			return require("plugins.configs.neo-tree")
+			return require("plugins.configs.nvimtree")
 		end,
 		config = function(_, opts)
-			vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-
-			require("neo-tree").setup(opts)
+			require("nvim-tree").setup(opts)
+			vim.g.nvimtree_side = opts.view.side
 		end,
 	},
 	{
