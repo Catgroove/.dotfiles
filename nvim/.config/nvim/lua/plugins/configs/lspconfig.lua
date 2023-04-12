@@ -8,7 +8,7 @@ local on_attach = function(_, bufnr)
 	keymap.set("n", "K", function()
 		vim.lsp.buf.hover()
 	end, opts)
-	keymap.set("n", "ca", function()
+	keymap.set("n", "vca", function()
 		vim.lsp.buf.code_action()
 	end, opts)
 end

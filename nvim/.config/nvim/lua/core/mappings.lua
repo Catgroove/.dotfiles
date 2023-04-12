@@ -29,3 +29,9 @@ keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/tmux-sessionizer<CR>")
 
 -- quick search and replace on word
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- lazygit
+local util = require("lazy.util")
+keymap.set("n", "<leader>gg", function()
+	util.float_term({ "lazygit" })
+end)
