@@ -2,15 +2,10 @@ local keymap = vim.keymap
 
 local on_attach = function(_, bufnr)
 	local opts = { buffer = bufnr, remap = false }
-	keymap.set("n", "gd", function()
-		vim.lsp.buf.definition()
-	end, opts)
-	keymap.set("n", "K", function()
-		vim.lsp.buf.hover()
-	end, opts)
-	keymap.set("n", "vca", function()
-		vim.lsp.buf.code_action()
-	end, opts)
+	keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+	keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>")
+	keymap.set("n", "K", vim.lsp.buf.hover, opts)
+	keymap.set("n", "vca", vim.lsp.buf.code_action(), opts)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
