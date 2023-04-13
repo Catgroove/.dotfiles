@@ -3,7 +3,7 @@ local cmp = require("cmp")
 return {
 
 	completion = {
-		completeopt = "menu,menuone",
+		completeopt = "menu,menuone,noinsert",
 	},
 
 	window = {
@@ -17,11 +17,11 @@ return {
 		-- 	winhighlight = "Normal:CmpDoc",
 		-- },
 	},
-	-- snippet = {
-	--   expand = function(args)
-	--     require("luasnip").lsp_expand(args.body)
-	--   end,
-	-- },
+	snippet = {
+		expand = function(args)
+			require("luasnip").lsp_expand(args.body)
+		end,
+	},
 
 	-- formatting = formatting_style,
 
