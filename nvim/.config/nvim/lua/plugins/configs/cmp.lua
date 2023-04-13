@@ -23,7 +23,15 @@ return {
 		end,
 	},
 
-	-- formatting = formatting_style,
+	formatting = {
+		format = function(_, item)
+			local icons = require("plugins.configs.cmp_icons")
+			if icons[item.kind] then
+				item.kind = icons[item.kind] .. item.kind
+			end
+			return item
+		end,
+	},
 
 	mapping = {
 		["<C-k>"] = cmp.mapping.select_prev_item(),
