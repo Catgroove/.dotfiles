@@ -1,5 +1,5 @@
-require("core.mappings")
 require("core.lazy")
+require("core.mappings")
 
 local opt = vim.opt
 
