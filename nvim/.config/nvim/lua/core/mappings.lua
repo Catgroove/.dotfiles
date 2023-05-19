@@ -4,7 +4,7 @@ local keymap = vim.keymap
 vim.g.mapleader = " "
 
 -- telescope
-keymap.set("n", "<leader>ff", "<cmd> Telescope find_files hidden=true <CR>")
+keymap.set("n", "<leader>fs", "<cmd> Telescope find_files hidden=true <CR>")
 keymap.set("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
 keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
 
