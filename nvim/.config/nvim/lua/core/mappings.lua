@@ -11,6 +11,10 @@ keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
 -- neo-tree
 keymap.set("n", "<leader>fe", "<cmd> NvimTreeToggle <CR>")
 
+-- buffers
+keymap.set("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>")
+keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>")
+
 -- move in visual mode
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")

@@ -91,6 +91,26 @@ local default_plugins = {
 		end,
 	},
 	{
+		"akinsho/bufferline.nvim",
+		opts = function()
+			return require("plugins.configs.bufferline")
+		end,
+		config = function(_, opts)
+			require("bufferline").setup(opts)
+		end,
+	},
+	{
+		"echasnovski/mini.bufremove",
+		keys = {
+			{
+				"<leader>bd",
+				function()
+					require("mini.bufremove").delete(0, false)
+				end,
+			},
+		},
+	},
+	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		config = function()

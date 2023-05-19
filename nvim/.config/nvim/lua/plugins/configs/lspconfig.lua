@@ -5,8 +5,8 @@ local on_attach = function(_, bufnr)
 	keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 	keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>")
 	keymap.set("n", "K", vim.lsp.buf.hover, opts)
-	keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, opts)
-	keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
+	keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+	keymap.set("n", "<leader>co", vim.diagnostic.open_float, opts)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
