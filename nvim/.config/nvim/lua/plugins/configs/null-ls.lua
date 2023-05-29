@@ -4,6 +4,8 @@ local formatting = null_ls.builtins.formatting
 local lint = null_ls.builtins.diagnostics
 
 local sources = {
+	formatting.gofumpt,
+	formatting.goimports_reviser,
 	formatting.prettier,
 	formatting.stylua,
 	lint.eslint_d.with({
@@ -34,7 +36,6 @@ local on_attach = function(current_client, bufnr)
 end
 
 null_ls.setup({
-
 	debug = true,
 	sources = sources,
 	on_attach = on_attach,

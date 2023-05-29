@@ -19,6 +19,9 @@ keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>")
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- yank without moving cursor in visual mode
+keymap.set("v", "y", "ygv<Esc>")
+
 -- keep cursor on J
 keymap.set("n", "J", "mzJ`z")
 
