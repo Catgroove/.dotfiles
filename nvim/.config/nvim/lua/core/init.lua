@@ -2,10 +2,14 @@ require("core.lazy")
 require("core.mappings")
 
 local opt = vim.opt
+local set = vim.set
 
 -- line number
 opt.relativenumber = true
 opt.number = true
+
+-- include "-" in word
+opt.iskeyword:append("-")
 
 -- wrap
 opt.wrap = true
