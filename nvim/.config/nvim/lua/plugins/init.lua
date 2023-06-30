@@ -111,6 +111,15 @@ local default_plugins = {
 		},
 	},
 	{
+		"ThePrimeagen/harpoon",
+		opts = function()
+			return require("plugins.configs.harpoon")
+		end,
+		config = function(_, opts)
+			require("harpoon").setup(opts)
+		end,
+	},
+	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		config = function()
