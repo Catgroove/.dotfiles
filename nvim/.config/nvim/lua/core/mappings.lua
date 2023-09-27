@@ -8,6 +8,9 @@ keymap.set("n", "<leader>fs", "<cmd> Telescope find_files hidden=true <CR>")
 keymap.set("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
 keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
 
+-- jump to next match, replace and start editing
+keymap.set("n", "<leader><tab>", "gnc")
+
 -- neo-tree
 keymap.set("n", "<leader>fe", "<cmd> NvimTreeToggle <CR>")
 

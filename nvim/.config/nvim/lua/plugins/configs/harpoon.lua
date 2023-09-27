@@ -10,4 +10,8 @@ vim.keymap.set("n", "<C-n>", function()
 	ui.nav_file(2)
 end)
 
+vim.keymap.set("n", "<C-m>", function()
+	ui.nav_file(3)
+end)
+
 return {}
