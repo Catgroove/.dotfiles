@@ -42,6 +42,6 @@ keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
 
 -- lazygit
 local util = require("lazy.util")
-keymap.set("n", "<leader>gg", function()
+keymap.set("n", "<leader>lg", function()
 	util.float_term({ "lazygit" })
 end)
