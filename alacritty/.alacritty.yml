@@ -3,7 +3,7 @@ import:
 
 font:
   normal:
-    family: FiraCode Nerd Font 
+    family: FiraCode Nerd Font
     style: Regular
 
   bold:
@@ -16,6 +16,17 @@ font:
 
   bold_italic:
     family: FiraCode Nerd Font
-    style: Bold Italic
+    style: Bold Italir
 
   size: 20
+
+key_bindings:
+  - { key: G, mods: Command, chars: "\x01g" } # <Ctrl-a>+g - Opens lazy[G]it
+  - { key: L, mods: Command, chars: "\x01s" } # <Ctrl-a>+s - [L]ist sessions
+  - { key: M, mods: Command, chars: "\x01m" } # <Ctrl-a>+m - [M]aximize pane
+  - { key: S, mods: Command, chars: "\x1b\x3a\x77\x0a" } # <Esc>:w<Enter> - [S]aves vim
+  - { key: T, mods: Command, chars: "\x01c" } # <Ctrl-a>+c - [T]o create a new window
+  - { key: W, mods: Command, chars: "\x01x" } # <Ctrl-a>+x - To remove a [W]indow
+  - { key: Minus, mods: Command, chars: "\x01L" } # <Ctrl-a>+l - previous session
+  - { key: Period, mods: Command, chars: "\x01n" } # <Ctrl-a>+n - next window
+  - { key: Comma, mods: Command, chars: "\x01p" } # <Ctrl-a>+p - previous window
