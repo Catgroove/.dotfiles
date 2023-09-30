@@ -138,3 +138,6 @@ PERL_MM_OPT="INSTALL_BASE=/Users/martinnorberg/perl5"; export PERL_MM_OPT;
 
 plugins+=(vi-mode)
 
+eval "$(zoxide init zsh)"
+
+export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
