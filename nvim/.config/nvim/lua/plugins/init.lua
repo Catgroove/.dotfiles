@@ -96,15 +96,15 @@ local default_plugins = {
 			vim.g.nvimtree_side = opts.view.side
 		end,
 	},
-	{
-		"akinsho/bufferline.nvim",
-		opts = function()
-			return require("plugins.configs.bufferline")
-		end,
-		config = function(_, opts)
-			require("bufferline").setup(opts)
-		end,
-	},
+	-- {
+	-- 	"akinsho/bufferline.nvim",
+	-- 	opts = function()
+	-- 		return require("plugins.configs.bufferline")
+	-- 	end,
+	-- 	config = function(_, opts)
+	-- 		require("bufferline").setup(opts)
+	-- 	end,
+	-- },
 	{
 		"echasnovski/mini.bufremove",
 		keys = {

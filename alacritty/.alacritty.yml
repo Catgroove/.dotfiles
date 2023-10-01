@@ -21,6 +21,8 @@ font:
   size: 20
 
 key_bindings:
+  - { key: J, mods: Command, chars: "\x01v" } # <Ctrl-a>+v - Vertical slice [J]
+  - { key: H, mods: Command, chars: "\x01-" } # <Ctrl-a>+- - [H]orizontal slice
   - { key: G, mods: Command, chars: "\x01g" } # <Ctrl-a>+g - Opens lazy[G]it
   - { key: L, mods: Command, chars: "\x01s" } # <Ctrl-a>+s - [L]ist sessions
   - { key: M, mods: Command, chars: "\x01m" } # <Ctrl-a>+m - [M]aximize pane
