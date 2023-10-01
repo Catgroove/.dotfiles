@@ -1,5 +1,6 @@
 require("core.lazy")
 require("core.mappings")
+require("core.autocmds")
 
 local opt = vim.opt
 local set = vim.set
