@@ -3,7 +3,7 @@ return {
 		icons_enabled = true,
 		theme = "auto",
 		component_separators = { left = "", right = "" },
-		section_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
 			statusline = {},
 			winbar = {},
@@ -24,9 +24,9 @@ return {
 			{ "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
 			{ "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
 		},
-		lualine_x = { "diagnostics" },
-		lualine_y = { "progress" },
-		lualine_z = { "location" },
+		lualine_x = {},
+		lualine_y = {},
+		lualine_z = {},
 	},
 	inactive_sections = {
 		lualine_a = {},
