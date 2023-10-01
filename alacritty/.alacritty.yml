@@ -1,6 +1,14 @@
 import:
   - ~/catppuccin/catppuccin-mocha.yml
 
+window:
+  padding:
+    x: 18
+    y: 16
+  dynamic padding: false
+  decorations: buttonless
+  startup_mode: SimpleFullscreen
+
 font:
   normal:
     family: FiraCode Nerd Font
