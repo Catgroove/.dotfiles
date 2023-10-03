@@ -30,13 +30,15 @@ font:
 
 key_bindings:
   - { key: J, mods: Command, chars: "\x01v" } # <Ctrl-a>+v - Vertical slice [J]
+  - { key: K, mods: Command, chars: "\x01v" } # <Ctrl-a>+k - Verti[k]al slice [J]
   - { key: H, mods: Command, chars: "\x01-" } # <Ctrl-a>+- - [H]orizontal slice
   - { key: G, mods: Command, chars: "\x01g" } # <Ctrl-a>+g - Opens lazy[G]it
-  - { key: L, mods: Command, chars: "\x01s" } # <Ctrl-a>+s - [L]ist sessions
+  - { key: L, mods: Command, chars: "\x01-" } # <Ctrl-a>+s - Horizonta[L] Slice
   - { key: M, mods: Command, chars: "\x01m" } # <Ctrl-a>+m - [M]aximize pane
   - { key: S, mods: Command, chars: "\x1b\x3a\x77\x0a" } # <Esc>:w<Enter> - [S]aves vim
   - { key: T, mods: Command, chars: "\x01c" } # <Ctrl-a>+c - [T]o create a new window
   - { key: W, mods: Command, chars: "\x01x" } # <Ctrl-a>+x - To remove a [W]indow
   - { key: Minus, mods: Command, chars: "\x01L" } # <Ctrl-a>+l - previous session
+  - { key: Minus, mods: Command|Shift, chars: "\x01s" } # <Ctrl-a>+s - list all sessions
   - { key: Period, mods: Command, chars: "\x01n" } # <Ctrl-a>+n - next window
   - { key: Comma, mods: Command, chars: "\x01p" } # <Ctrl-a>+p - previous window
