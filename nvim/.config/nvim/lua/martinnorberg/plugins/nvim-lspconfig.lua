@@ -12,6 +12,7 @@ return {
 
 		local on_attach = function(_, bufnr)
 			local opts = { buffer = bufnr, remap = false }
+			keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 			keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>")
 			keymap.set("n", "gs", "<cmd>Telescope lsp_document_symbols<CR>")
 			keymap.set("n", "gI", vim.lsp.buf.implementation, opts)
@@ -33,6 +34,12 @@ return {
 				capabilities = capabilities,
 			})
 		end
+
+		lspconfig.elixirls.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			cmd = { "elixir-ls" },
+		})
 
 		lspconfig.gopls.setup({
 			on_attach = on_attach,

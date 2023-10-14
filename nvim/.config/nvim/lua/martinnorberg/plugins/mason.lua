@@ -1,20 +1,27 @@
 return {
 	"williamboman/mason.nvim",
+	dependencies = {
+		"williamboman/mason-lspconfig.nvim",
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+	},
 	config = function()
-		require("mason").setup({
+		require("mason").setup()
+
+		require("mason-lspconfig").setup({
 			ensure_installed = {
-				"lua-language-server",
-				"stylua",
-				"typescript-language-server",
-				"prettier",
-				"eslint_d",
+				"lua_ls",
+				"tsserver",
 				"gopls",
+				"elixirls",
 			},
 		})
 
-		vim.api.nvim_create_user_command("MasonInstallAll", function()
-			vim.cmd("MasonInstall " .. table.concat(opts.ensure_installed, " "))
-		end, {})
-		--			vim.g.mason_binaries_list = opts.ensure_installed
+		require("mason-tool-installer").setup({
+			ensure_installed = {
+				"prettier",
+				"stylua",
+				"eslint_d",
+			},
+		})
 	end,
 }
