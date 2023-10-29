@@ -1,9 +1,16 @@
-# Required
+# Manual Installation Required
 
-- oh-my-zsh
+- brew
 - alacritty
+- oh-my-zsh
+- gh cli
+- FiraCode Nerd Font
 - tmux
 - fzf
-- nvim z (not configured)
 - exa
 - bat
+- zoxide
+- tpm
+- node & npm
+- go
+- lazygit
