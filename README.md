@@ -9,6 +9,7 @@
 - fzf
 - exa
 - bat
+- ripgrep
 - zoxide
 - tpm
 - node & npm
