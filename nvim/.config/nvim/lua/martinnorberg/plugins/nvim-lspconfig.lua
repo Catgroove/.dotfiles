@@ -39,6 +39,7 @@ return {
 			on_attach = on_attach,
 			capabilities = capabilities,
 			cmd = { "elixir-ls" },
+			root_dir = util.root_pattern("mix.exs"),
 		})
 
 		lspconfig.gopls.setup({
