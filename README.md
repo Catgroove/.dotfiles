@@ -1,5 +1,7 @@
 # Manual Installation Required
 
+# Core
+
 - brew
 - alacritty
 - oh-my-zsh
@@ -15,3 +17,4 @@
 - node & npm
 - go
 - lazygit
+- elixir
