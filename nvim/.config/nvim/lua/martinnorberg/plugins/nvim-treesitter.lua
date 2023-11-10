@@ -20,6 +20,7 @@ return {
 				"bash",
 				"dockerfile",
 				"gitignore",
+				"proto",
 			},
 
 			highlight = {
