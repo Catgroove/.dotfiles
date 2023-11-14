@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <trace_id>"
+    exit 1
+fi
+
+TRACE_ID=$1
+
+gcloud logging read "severity>=WARNING AND jsonPayload.trace_id=$TRACE_ID AND jsonPayload.error != ''" --format json | jq '[.[] | .jsonPayload.error] | unique'
