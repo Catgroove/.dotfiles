@@ -16,6 +16,6 @@ brew 'zoxide'
 
 # languages
 brew 'node'
-brew 'go'
+brew 'goenv'
 brew 'elixir'
 
