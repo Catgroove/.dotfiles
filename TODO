@@ -1,0 +1,5 @@
+* Starship
+* Refactor into multiple zsh files (load work one from private repo, etc)
+* Vim: New textobjects
+* Vim: Surround plugin
+* Testing plugin?
