@@ -8,6 +8,10 @@ keymap.set("n", "<leader>fs", "<cmd> Telescope find_files hidden=true <CR>")
 keymap.set("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
 keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
 
+-- move through wrapped lines
+keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true })
+keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
+
 -- jump to next match, replace and start editing
 keymap.set("n", "<leader><tab>", "gnc")
 

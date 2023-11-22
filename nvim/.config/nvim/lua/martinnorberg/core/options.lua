@@ -10,6 +10,7 @@ opt.iskeyword:append("-")
 
 -- wrap
 opt.wrap = true
+opt.breakindent = true
 
 -- updatetime
 opt.updatetime = 50
