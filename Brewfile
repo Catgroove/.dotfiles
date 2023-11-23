@@ -1,3 +1,5 @@
+tap 'go-swagger/go-swagger'
+
 # fonts
 cask 'font-fira-code-nerd-font'
 
@@ -18,4 +20,5 @@ brew 'zoxide'
 brew 'node'
 brew 'goenv'
 brew 'elixir'
-
+brew 'protoc'
+brew 'go-swagger'
