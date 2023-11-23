@@ -15,6 +15,7 @@ brew 'exa'
 brew 'bat'
 brew 'ripgrep'
 brew 'zoxide'
+brew 'starship'
 
 # languages
 brew 'node'
