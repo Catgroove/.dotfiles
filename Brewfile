@@ -18,9 +18,6 @@ brew 'zoxide'
 brew 'starship'
 brew 'grpcui'
 
-# plugins
-brew 'zsh-history-substring-search'
-
 # languages
 brew 'node'
 brew 'goenv'
