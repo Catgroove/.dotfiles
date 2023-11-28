@@ -16,6 +16,7 @@ brew 'bat'
 brew 'ripgrep'
 brew 'zoxide'
 brew 'starship'
+brew 'grpcui'
 
 # languages
 brew 'node'
