@@ -17,6 +17,7 @@ brew 'ripgrep'
 brew 'zoxide'
 brew 'starship'
 brew 'grpcui'
+brew 'k9s'
 
 # languages
 brew 'node'
