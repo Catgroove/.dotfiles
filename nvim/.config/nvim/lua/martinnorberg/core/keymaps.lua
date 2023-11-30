@@ -9,8 +9,8 @@ keymap.set("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
 keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
 
 -- move through wrapped lines
-keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true })
-keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true })
+keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
+keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
 
 -- jump to next match, replace and start editing
 keymap.set("n", "<leader><tab>", "gnc")
@@ -43,3 +43,6 @@ keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/tmux-sessionizer<CR>")
 
 -- quick search and replace on word
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
+
+-- select all
+keymap.set("n", "<leader>A", "gg<S-v>G")
