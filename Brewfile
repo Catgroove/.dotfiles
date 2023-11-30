@@ -8,6 +8,9 @@ cask 'alacritty'
 brew 'gh'
 brew 'tmux'
 brew 'lazygit'
+brew 'k9s'
+brew 'grpcui'
+brew 'withgraphite/tap/graphite'
 
 # cli
 brew 'fzf'
@@ -16,8 +19,6 @@ brew 'bat'
 brew 'ripgrep'
 brew 'zoxide'
 brew 'starship'
-brew 'grpcui'
-brew 'k9s'
 
 # languages
 brew 'node'
