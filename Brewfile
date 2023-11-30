@@ -19,6 +19,8 @@ brew 'bat'
 brew 'ripgrep'
 brew 'zoxide'
 brew 'starship'
+brew 'jq'
+brew 'yq'
 
 # languages
 brew 'node'
