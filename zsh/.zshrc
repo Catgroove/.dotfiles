@@ -9,6 +9,8 @@ alias lt='exa --tree --level=2 --long --icons --git'
 alias vim='nvim'
 alias ports='sudo lsof -iTCP -sTCP:LISTEN -n -P'
 
+alias newalias="changed"
+
 # git
 alias gp='git pull'
 alias gpu='git push'
