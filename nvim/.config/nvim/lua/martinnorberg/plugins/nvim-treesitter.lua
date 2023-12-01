@@ -21,6 +21,7 @@ return {
 				"dockerfile",
 				"gitignore",
 				"proto",
+				"sql",
 			},
 
 			highlight = {

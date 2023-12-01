@@ -21,6 +21,7 @@ return {
 				"prettier",
 				"stylua",
 				"eslint_d",
+				"sqlfluff",
 			},
 		})
 	end,

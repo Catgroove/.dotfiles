@@ -35,6 +35,12 @@ local sources = {
 			return utils.root_has_file(".eslintrc.js")
 		end,
 	}),
+	formatting.sqlfluff.with({
+		extra_args = { "--dialect", "postgres" },
+	}),
+	lint.sqlfluff.with({
+		extra_args = { "--dialect", "postgres" },
+	}),
 }
 
 local on_attach = function(current_client, bufnr)
