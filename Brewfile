@@ -21,6 +21,7 @@ brew 'zoxide'
 brew 'starship'
 brew 'jq'
 brew 'yq'
+brew 'pnpm'
 
 # languages
 brew 'node'
