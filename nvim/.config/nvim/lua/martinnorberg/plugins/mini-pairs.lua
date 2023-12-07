@@ -1,6 +1,6 @@
 return {
 	"echasnovski/mini.pairs",
-	event = { "BufReadPre", "BufNewFile" },
+	event = "VeryLazy",
 	config = function()
 		require("mini.pairs").setup()
 	end,

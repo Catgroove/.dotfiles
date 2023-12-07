@@ -1,6 +1,6 @@
 return {
 	"echasnovski/mini.surround",
-	event = { "BufReadPre", "BufNewFile" },
+	event = "VeryLazy",
 	config = function()
 		require("mini.surround").setup()
 	end,
