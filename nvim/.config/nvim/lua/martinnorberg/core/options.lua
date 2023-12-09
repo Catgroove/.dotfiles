@@ -41,3 +41,7 @@ opt.incsearch = true
 
 -- disable mode
 opt.showmode = false
+
+-- undofile
+opt.undofile = true
+opt.undolevels = 10000
