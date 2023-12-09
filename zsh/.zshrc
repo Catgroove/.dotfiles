@@ -42,3 +42,6 @@ plugins+=(vi-mode)
 eval "$(zoxide init zsh)"
 
 export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
+
+eval "$(direnv hook zsh)"
+

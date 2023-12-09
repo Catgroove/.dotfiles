@@ -22,6 +22,7 @@ brew 'starship'
 brew 'jq'
 brew 'yq'
 brew 'pnpm'
+brew 'direnv'
 
 # languages
 brew 'node'
