@@ -49,3 +49,10 @@ keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
 
 -- select all
 keymap.set("n", "<leader>A", "gg<S-v>G")
+
+-- better indenting
+keymap.set("v", "<", "<gv")
+keymap.set("v", ">", ">gv")
+
+-- new file
+keymap.set("n", "<leader>fn", "<cmd>enew<cr>")
