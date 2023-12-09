@@ -38,3 +38,6 @@ opt.smartindent = true
 -- highlight
 opt.hlsearch = false
 opt.incsearch = true
+
+-- disable mode
+opt.showmode = false
