@@ -1,5 +1,4 @@
 local opt = vim.opt
-local set = vim.set
 
 -- line number
 opt.relativenumber = true
@@ -45,3 +44,7 @@ opt.showmode = false
 -- undofile
 opt.undofile = true
 opt.undolevels = 10000
+
+-- casing
+opt.ignorecase = true
+opt.smartcase = true
