@@ -30,11 +30,7 @@ local sources = {
 	goimportstidy,
 	formatting.prettier,
 	formatting.stylua,
-	lint.eslint_d.with({
-		condition = function(utils)
-			return utils.root_has_file(".eslintrc.js")
-		end,
-	}),
+	lint.eslint_d,
 	formatting.sqlfluff.with({
 		extra_args = { "--dialect", "postgres" },
 	}),
