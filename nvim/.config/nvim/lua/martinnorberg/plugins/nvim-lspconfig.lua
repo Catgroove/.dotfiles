@@ -20,13 +20,14 @@ return {
 			keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 			keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 			keymap.set("n", "<leader>co", vim.diagnostic.open_float, opts)
+			keymap.set("n", "<leader>ci", "<cmd>OrganizeImports<CR>")
 		end
 
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 		local lspconfig = require("lspconfig")
 		local util = require("lspconfig/util")
-		local servers = { "lua_ls", "tsserver" }
+		local servers = { "lua_ls" }
 
 		for _, lsp in ipairs(servers) do
 			lspconfig[lsp].setup({
@@ -34,6 +35,27 @@ return {
 				capabilities = capabilities,
 			})
 		end
+
+		local function organize_imports()
+			local params = {
+				command = "_typescript.organizeImports",
+				arguments = { vim.api.nvim_buf_get_name(0) },
+			}
+
+			vim.lsp.buf.execute_command(params)
+		end
+
+		lspconfig.tsserver.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			commands = {
+				OrganizeImports = {
+
+					organize_imports,
+					description = "Organize Imports",
+				},
+			},
+		})
 
 		lspconfig.elixirls.setup({
 			on_attach = on_attach,
