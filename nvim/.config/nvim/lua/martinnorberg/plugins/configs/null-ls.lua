@@ -28,7 +28,7 @@ local sources = {
 	formatting.mix,
 	formatting.gofumpt,
 	goimportstidy,
-	formatting.prettier,
+	formatting.prettierd,
 	formatting.stylua,
 	lint.eslint_d,
 	formatting.sqlfluff.with({
