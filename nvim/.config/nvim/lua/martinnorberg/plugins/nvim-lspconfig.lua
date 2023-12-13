@@ -12,7 +12,8 @@ return {
 
 		local on_attach = function(_, bufnr)
 			local opts = { buffer = bufnr, remap = false }
-			keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+			keymap.set("n", "<leader>rs", "<cmd>LspRestart<CR>", opts)
+			keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
 			keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>")
 			keymap.set("n", "gs", "<cmd>Telescope lsp_document_symbols<CR>")
 			keymap.set("n", "gI", vim.lsp.buf.implementation, opts)
@@ -20,7 +21,7 @@ return {
 			keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 			keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 			keymap.set("n", "<leader>co", vim.diagnostic.open_float, opts)
-			keymap.set("n", "<leader>ci", "<cmd>OrganizeImports<CR>")
+			keymap.set("n", "", "<cmd>OrganizeImports<CR>")
 		end
 
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
