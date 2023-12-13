@@ -5,7 +5,7 @@ opt.relativenumber = true
 opt.number = true
 
 -- include "-" in word
-opt.iskeyword:append("-")
+-- opt.iskeyword:append("-")
 
 -- wrap
 opt.wrap = true

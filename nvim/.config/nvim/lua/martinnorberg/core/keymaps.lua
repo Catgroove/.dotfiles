@@ -56,3 +56,6 @@ keymap.set("v", ">", ">gv")
 
 -- new file
 keymap.set("n", "<leader>fn", "<cmd>enew<cr>")
+
+-- reload buffer
+keymap.set("n", "<leader>fr", "<cmd>e!<cr>")
