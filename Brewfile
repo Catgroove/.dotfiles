@@ -13,7 +13,6 @@ brew 'grpcui'
 brew 'withgraphite/tap/graphite'
 brew 'grpcui'
 
-
 # cli
 brew 'fzf'
 brew 'exa'
