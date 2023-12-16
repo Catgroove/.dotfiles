@@ -11,6 +11,7 @@ brew 'lazygit'
 brew 'k9s'
 brew 'grpcui'
 brew 'withgraphite/tap/graphite'
+brew 'grpcui'
 
 # cli
 brew 'fzf'
