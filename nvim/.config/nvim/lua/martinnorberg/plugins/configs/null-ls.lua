@@ -28,7 +28,11 @@ local sources = {
 	formatting.mix,
 	formatting.gofumpt,
 	goimportstidy,
-	formatting.prettierd,
+	formatting.prettierd.with({
+		condition = function(utils)
+			return utils.has_file({ ".prettierrc.js" }) or utils.has_file({ "prettier.config.cjs" })
+		end,
+	}),
 	formatting.stylua,
 	lint.eslint_d,
 	formatting.sqlfluff.with({
