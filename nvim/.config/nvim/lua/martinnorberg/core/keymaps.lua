@@ -6,7 +6,9 @@ vim.g.mapleader = " "
 -- telescope
 keymap.set("n", "<leader>fs", "<cmd> Telescope find_files hidden=true <CR>")
 keymap.set("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
-keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
+keymap.set("n", "<leader>fg", "<cmd> Telescope live_grep <CR>")
+keymap.set("n", "<leader>fw", "<cmd> Telescope grep_string <CR>")
+keymap.set("n", "<leader>fd", "<cmd> Telescope diagnostics <CR>")
 
 -- spectre
 keymap.set("n", "<leader>S", "<cmd> lua require('spectre').toggle() <CR>")
