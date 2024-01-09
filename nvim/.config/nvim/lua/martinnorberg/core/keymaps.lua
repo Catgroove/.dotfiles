@@ -3,6 +3,9 @@ local keymap = vim.keymap
 -- core
 vim.g.mapleader = " "
 
+-- alternate file
+keymap.set("n", "<leader>w", "<c-^>")
+
 -- telescope
 keymap.set("n", "<leader>fs", "<cmd> Telescope find_files hidden=true <CR>")
 keymap.set("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
