@@ -24,6 +24,7 @@ brew 'jq'
 brew 'yq'
 brew 'pnpm'
 brew 'direnv'
+brew 'golang-migrate'
 
 # languages
 brew 'node'
