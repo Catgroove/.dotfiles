@@ -20,6 +20,10 @@ keymap.set("n", "<leader>S", "<cmd> lua require('spectre').toggle() <CR>")
 keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
 
+-- move through quickfix list
+keymap.set("n", "]q", vim.cmd.cnext)
+keymap.set("n", "[q", vim.cmd.cprev)
+
 -- jump to next match, replace and start editing
 keymap.set("n", "<leader><tab>", "gnc")
 
