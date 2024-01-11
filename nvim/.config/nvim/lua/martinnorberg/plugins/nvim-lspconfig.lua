@@ -16,7 +16,7 @@ return {
 			keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts)
 			keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>")
 			keymap.set("n", "gs", "<cmd>Telescope lsp_document_symbols<CR>")
-			keymap.set("n", "gI", vim.lsp.buf.implementation, opts)
+			keymap.set("n", "gI", "<cmd>Telescope lsp_implementations<CR>", opts)
 			keymap.set("n", "K", vim.lsp.buf.hover, opts)
 			keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 			keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
