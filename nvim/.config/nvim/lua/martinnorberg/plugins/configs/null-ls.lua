@@ -30,7 +30,9 @@ local sources = {
 	goimportstidy,
 	formatting.prettierd.with({
 		condition = function(utils)
-			return utils.has_file({ ".prettierrc.js" }) or utils.has_file({ "prettier.config.cjs" })
+			return utils.has_file({ ".prettierrc.js" })
+				or utils.has_file({ "prettier.config.cjs" })
+				or utils.has_file({ "prettier.config.mjs" })
 		end,
 	}),
 	formatting.stylua,
