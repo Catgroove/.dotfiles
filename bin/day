@@ -1,0 +1,25 @@
+#!/bin/bash
+
+today=$(date +"%Y-%m-%d")
+tomorrow=$(gdate -d "tomorrow" '+%Y-%m-%d')
+yesterday=$(gdate -d "yesterday" '+%Y-%m-%d')
+file="$NOTES"'/work/daily/'$(date +"%Y-%m-%d").md
+
+cd "$NOTES" || exit
+
+if [ ! -f "$file" ]; then
+	echo "File does not exist, creating new daily note."
+	touch "$file"
+
+	# Format the file with the daily template
+	cat <<EOF >"$file"
+# $today
+
+[[$yesterday]] - [[$tomorrow]]
+
+## Log
+
+EOF
+fi
+
+nvim '+ normal Gzzo' -n "$file" -c 'startinsert'

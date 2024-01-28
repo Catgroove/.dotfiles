@@ -24,6 +24,8 @@ alias gcd='git checkout master'
 alias gcx='git checkout main'
 alias grdiff='git log --first-parent --pretty=format:"%s" --date=short master..development'
 
+export NOTES="/Users/martinnorberg/repos/notes"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/martinnorberg/.oh-my-zsh"
 
