@@ -1,5 +1,5 @@
 # sessionizer
-bindkey -s ^f "~/tmux-sessionizer\n"
+bindkey -s ^f "tmux-sessionizer\n"
 
 # ls
 alias l='exa -l --icons --git -a'
