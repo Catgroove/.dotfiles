@@ -14,7 +14,7 @@ keymap.set("n", "<leader>fw", "<cmd> Telescope grep_string <CR>")
 keymap.set("n", "<leader>fd", "<cmd> Telescope diagnostics <CR>")
 
 -- paste yank with newline, inline
-keymap.set("n", "<leader>p", "i<CR><Esc>PkJxJx")
+keymap.set("x", "<leader>p", '"_dP')
 
 -- spectre
 keymap.set("n", "<leader>S", "<cmd> lua require('spectre').toggle() <CR>")
