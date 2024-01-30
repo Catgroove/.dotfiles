@@ -48,3 +48,6 @@ opt.undolevels = 10000
 -- casing
 opt.ignorecase = true
 opt.smartcase = true
+
+-- scrolloff
+opt.scrolloff = 8
