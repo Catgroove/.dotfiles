@@ -2,9 +2,9 @@ return {
 	"neovim/nvim-lspconfig",
 	event = "VeryLazy",
 	dependencies = {
-		"jose-elias-alvarez/null-ls.nvim",
+		"nvimtools/none-ls.nvim",
 		config = function()
-			require("martinnorberg.plugins.configs.null-ls")
+			require("martinnorberg.plugins.configs.none-ls")
 		end,
 	},
 	config = function()
