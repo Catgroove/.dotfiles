@@ -1,7 +1,31 @@
+local function custom_on_attach(bufnr)
+	local api = require("nvim-tree.api")
+	local lib = require("nvim-tree.lib")
+
+	local function opts(desc)
+		return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+	end
+
+	local function grep_at_dir()
+		local node = lib.get_node_at_cursor()
+		if not node then
+			return
+		end
+		require("telescope.builtin").live_grep({ search_dirs = { node.absolute_path } })
+	end
+
+	-- default mappings
+	api.config.mappings.default_on_attach(bufnr)
+
+	-- custom mappings
+	vim.keymap.set("n", "<leader>gr", grep_at_dir, opts("grep at dir"))
+end
+
 return {
 	"nvim-tree/nvim-tree.lua",
 	config = function()
 		require("nvim-tree").setup({
+			on_attach = custom_on_attach,
 			filters = {
 				dotfiles = false,
 				exclude = { vim.fn.stdpath("config") .. "/lua/custom" },

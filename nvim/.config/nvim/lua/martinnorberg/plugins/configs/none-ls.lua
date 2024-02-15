@@ -26,7 +26,7 @@ local goimportstidy = h.make_builtin({
 
 local sources = {
 	formatting.mix,
-	formatting.gofumpt,
+	formatting.gofmt,
 	goimportstidy,
 	formatting.prettierd.with({
 		condition = function(utils)
