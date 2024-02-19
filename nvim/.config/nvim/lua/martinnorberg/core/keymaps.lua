@@ -30,12 +30,8 @@ keymap.set("n", "<leader>qp", vim.cmd.cprev)
 -- jump to next match, replace and start editing
 keymap.set("n", "<leader><tab>", "gnc")
 
--- neo-tree
+-- nvim-tree
 keymap.set("n", "<leader>fe", "<cmd> NvimTreeToggle <CR>")
-
--- buffers
-keymap.set("n", "<S-h>", "<cmd>BufferLineCyclePrev<cr>")
-keymap.set("n", "<S-l>", "<cmd>BufferLineCycleNext<cr>")
 
 -- move in visual mode
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -47,11 +43,14 @@ keymap.set("v", "y", "ygv<Esc>")
 -- keep cursor on J
 keymap.set("n", "J", "mzJ`z")
 
--- refocus when scrolling
+-- refocus when navigation
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
+keymap.set("n", "<C-i>", "<C-i>zz")
+keymap.set("n", "<C-o>", "<C-o>zz")
+keymap.set("n", "G", "Gzz")
 
 -- tmux-sessionizer
 keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
