@@ -7,4 +7,4 @@ fi
 
 TRACE_ID=$1
 
-gcloud logging read "severity>=WARNING AND jsonPayload.trace_id=$TRACE_ID AND jsonPayload.error != ''" --format json | jq '[.[] | .jsonPayload.error] | unique'
+open "https://debug.ingrid.com/view-payloads?trace_id=$TRACE_ID"
