@@ -24,8 +24,8 @@ keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
 
 -- move through quickfix list
-keymap.set("n", "]q", vim.cmd.cnext)
-keymap.set("n", "[q", vim.cmd.cprev)
+keymap.set("n", "<leader>qn", vim.cmd.cnext)
+keymap.set("n", "<leader>qp", vim.cmd.cprev)
 
 -- jump to next match, replace and start editing
 keymap.set("n", "<leader><tab>", "gnc")
