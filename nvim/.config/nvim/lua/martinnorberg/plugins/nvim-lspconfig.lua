@@ -18,10 +18,10 @@ return {
 			keymap.set("n", "gs", "<cmd>Telescope lsp_document_symbols<CR>")
 			keymap.set("n", "gI", "<cmd>Telescope lsp_implementations<CR>", opts)
 			keymap.set("n", "K", vim.lsp.buf.hover, opts)
+			keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
 			keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 			keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
 			keymap.set("n", "<leader>co", vim.diagnostic.open_float, opts)
-			keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 		end
 
 		local capabilities = vim.lsp.protocol.make_client_capabilities()
