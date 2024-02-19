@@ -24,8 +24,10 @@ keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
 
 -- move through quickfix list
-keymap.set("n", "<leader>qn", vim.cmd.cnext)
-keymap.set("n", "<leader>qp", vim.cmd.cprev)
+keymap.set("n", "<leader>cn", vim.cmd.cnext)
+keymap.set("n", "<leader>cp", vim.cmd.cprev)
+keymap.set("n", "<leader>co", vim.cmd.copen)
+keymap.set("n", "<leader>cc", vim.cmd.cclose)
 
 -- jump to next match, replace and start editing
 keymap.set("n", "<leader><tab>", "gnc")
@@ -52,6 +54,10 @@ keymap.set("n", "<C-i>", "<C-i>zz")
 keymap.set("n", "<C-o>", "<C-o>zz")
 keymap.set("n", "G", "Gzz")
 
+-- jump to start and end of line
+keymap.set("n", "H", "^")
+keymap.set("n", "L", "$")
+
 -- tmux-sessionizer
 keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
@@ -65,7 +71,7 @@ keymap.set("n", "<leader>A", "gg<S-v>G")
 keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 
--- new file
+-- new buffer
 keymap.set("n", "<leader>fn", "<cmd>enew<cr>")
 
 -- reload buffer
