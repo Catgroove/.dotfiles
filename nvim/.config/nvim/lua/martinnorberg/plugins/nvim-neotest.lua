@@ -10,8 +10,19 @@ return {
 		config = function()
 			local neotest = require("neotest")
 			neotest.setup({
-				adapters = {},
+				adapters = {
+					require("neotest-go")({
+						args = { "-v", "-count=1", "-race" },
+					}),
+				},
 			})
+			vim.keymap.set("n", "<leader>to", function()
+				neotest.output.open()
+			end)
+
+			vim.keymap.set("n", "<leader>ts", function()
+				neotest.summary.toggle()
+			end)
 
 			vim.keymap.set("n", "<leader>tc", function()
 				neotest.run.run()
