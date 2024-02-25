@@ -14,6 +14,7 @@ brew 'withgraphite/tap/graphite'
 brew 'grpcui'
 
 # cli
+brew 'fish'
 brew 'fzf'
 brew 'exa'
 brew 'bat'
