@@ -1,33 +1,20 @@
 local null_ls = require("null-ls")
-local h = require("null-ls.helpers")
-local methods = require("null-ls.methods")
 
 local formatting = null_ls.builtins.formatting
 local lint = null_ls.builtins.diagnostics
 
-local FORMATTING = methods.internal.FORMATTING
-
-local goimportstidy = h.make_builtin({
-	name = "goimportstidy",
-	meta = {
-		url = "https://github.com/krzysztofdrys/goimportstidy",
-		description = "This tool updates your Go import lines, grouping it into three groups",
-	},
-	method = FORMATTING,
-	filetypes = { "go" },
-	generator_opts = {
-		command = "goimportstidy",
-		args = { "-w", "-local", "github.com/shipwallet", "$FILENAME" },
-		to_temp_file = true,
-		prepend_extra_args = true,
-	},
-	factory = h.formatter_factory,
-})
-
 local sources = {
 	formatting.mix,
 	formatting.gofumpt,
-	goimportstidy,
+    formatting.goimports_reviser.with({
+        extra_args = {
+            "-imports-order", "std,general,company",
+            "-company-prefixes", "github.com/shipwallet",
+            "-rm-unused",
+            "-use-cache",
+        },
+    }),
+    -- gci,
 	lint.golangci_lint.with({
 		extra_args = { "--disable", "staticcheck", "--enable", "gosec" },
 	}),

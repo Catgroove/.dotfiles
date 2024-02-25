@@ -24,6 +24,7 @@ return {
 				"sqlfluff",
 				"gofumpt",
 				"golangci-lint",
+                "goimports-reviser",
 			},
 		})
 	end,
