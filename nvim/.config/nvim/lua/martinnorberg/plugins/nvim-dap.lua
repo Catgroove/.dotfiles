@@ -3,62 +3,41 @@ return {
 		"mfussenegger/nvim-dap",
 		dependencies = {
 			{
+				"theHamsta/nvim-dap-virtual-text",
+				opts = {},
+			},
+			{
 				"rcarriga/nvim-dap-ui",
+                --stylua: ignore
 				keys = {
-					{
-						"<leader>do",
-						function()
-							require("dapui").toggle({})
-						end,
-						desc = "Dap UI",
-					},
-					{
-						"<leader>de",
-						function()
-							require("dapui").eval()
-						end,
-						desc = "Eval",
-						mode = { "n", "v" },
-					},
+					{ "<leader>du", function() require("dapui").toggle({}) end },
 				},
 				opts = {},
 				config = function(_, opts)
-					-- setup dap config by VsCode launch.json file
-					-- require("dap.ext.vscode").load_launchjs()
 					local dap = require("dap")
 					local dapui = require("dapui")
 					dapui.setup(opts)
 					dap.listeners.after.event_initialized["dapui_config"] = function()
-						dapui.open({})
+						dapui.open()
 					end
 					dap.listeners.before.event_terminated["dapui_config"] = function()
-						dapui.close({})
+						dapui.close()
 					end
 					dap.listeners.before.event_exited["dapui_config"] = function()
-						dapui.close({})
+						dapui.close()
 					end
 				end,
 			},
 		},
+        -- stylua: ignore
 		keys = {
-			{
-				"<leader>db",
-				function()
-					require("dap").toggle_breakpoint()
-				end,
-			},
-			{
-				"<leader>dc",
-				function()
-					require("dap").clear_breakpoints()
-				end,
-			},
-			{
-				"<leader>dq",
-				function()
-					require("dap").terminate()
-				end,
-			},
+			{ "<leader>db", function() require("dap").toggle_breakpoint() end },
+			{ "<leader>dx", function() require("dap").clear_breakpoints() end },
+			{ "<leader>dq", function() require("dap").terminate() end },
+			{ "<leader>dc", function() require("dap").continue() end },
+			{ "<leader>di", function() require("dap").step_into() end },
+			{ "<leader>do", function() require("dap").step_over() end },
+			{ "<leader>dO", function() require("dap").step_out() end },
 		},
 	},
 	{
