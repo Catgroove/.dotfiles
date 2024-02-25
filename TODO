@@ -1,7 +1,6 @@
 * Refactor into multiple zsh files (load work one from private repo, etc)
-* Fish
 * Vim: New textobjects
 * yabai + skhd?
 * raycast? 
 * arc again?
-* Change tmux style to be more basic
+
