@@ -5,14 +5,10 @@ zoxide init fish | source
 direnv hook fish | source
 
 set -g fish_user_paths "$HOME/bin" $fish_user_paths
-
-set -gx GOENV_ROOT "$HOME/.goenv"
-set -gx GOPRIVATE "github.com/shipwallet/*"
-fish_add_path "$GOENV_ROOT/bin"
-status --is-interactive; and source (goenv init - | psub)
-
 set -U fish_greeting
 set -U fish_key_bindings fish_default_key_bindings
+
+set -gx GOPRIVATE "github.com/shipwallet/*"
 
 # abbrs
 abbr c clear
