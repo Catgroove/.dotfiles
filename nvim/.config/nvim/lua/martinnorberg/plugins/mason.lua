@@ -23,6 +23,7 @@ return {
 				"eslint_d",
 				"sqlfluff",
 				"gofumpt",
+				"golangci-lint",
 			},
 		})
 	end,

@@ -28,6 +28,9 @@ local sources = {
 	formatting.mix,
 	formatting.gofumpt,
 	goimportstidy,
+	lint.golangci_lint.with({
+		extra_args = { "--disable", "staticcheck", "--enable", "gosec" },
+	}),
 	formatting.prettierd.with({
 		condition = function(utils)
 			return utils.has_file({ ".prettierrc.js" })
