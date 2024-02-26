@@ -25,12 +25,7 @@ local goimportstidy = h.make_builtin({
 local sources = {
 	formatting.mix,
 	formatting.gofumpt,
-	formatting.goimports_reviser.with({
-		extra_args = {
-			"-rm-unused",
-			"-use-cache",
-		},
-	}),
+	formatting.goimports,
 	goimportstidy,
 	lint.golangci_lint.with({
 		extra_args = { "--disable", "staticcheck", "--enable", "gosec" },
