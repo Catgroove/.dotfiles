@@ -6,15 +6,17 @@ local lint = null_ls.builtins.diagnostics
 local sources = {
 	formatting.mix,
 	formatting.gofumpt,
-    formatting.goimports_reviser.with({
-        extra_args = {
-            "-imports-order", "std,general,company",
-            "-company-prefixes", "github.com/shipwallet",
-            "-rm-unused",
-            "-use-cache",
-        },
-    }),
-    -- gci,
+	formatting.goimports_reviser.with({
+		extra_args = {
+			"-rm-unused",
+			"-use-cache",
+			"-company-prefixes",
+			"github.com/shipwallet",
+			"-imports-order",
+			"std,general,company,project",
+		},
+	}),
+	-- gci,
 	lint.golangci_lint.with({
 		extra_args = { "--disable", "staticcheck", "--enable", "gosec" },
 	}),
