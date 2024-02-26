@@ -25,7 +25,7 @@ abbr lt "exa --tree --level=2 --long --icons --git"
 abbr ports "sudo lsof -iTCP -sTCP:LISTEN -n -P"
 
 abbr s "secret"
-abbr t "trace"
+abbr t "debug_trace"
 
 abbr vim "nvim"
 
