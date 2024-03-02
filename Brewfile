@@ -32,7 +32,7 @@ brew 'coreutils'
 
 # languages
 brew 'node'
-brew 'goenv'
+brew 'go'
 brew 'elixir'
 brew 'protoc'
 brew 'go-swagger'

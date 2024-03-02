@@ -8,6 +8,8 @@ set -g fish_user_paths "$HOME/bin" $fish_user_paths
 set -U fish_greeting
 set -U fish_key_bindings fish_default_key_bindings
 
+set -x GOPATH (go env GOPATH)
+set -x PATH $PATH $GOPATH/bin
 set -gx GOPRIVATE "github.com/shipwallet/*"
 
 # abbrs
