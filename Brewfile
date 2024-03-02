@@ -3,8 +3,10 @@ tap 'go-swagger/go-swagger'
 # fonts
 cask 'font-fira-code-nerd-font'
 
+
 # apps
 cask 'alacritty'
+cask 'arc'
 brew 'gh'
 brew 'tmux'
 brew 'lazygit'
