@@ -13,16 +13,17 @@ return {
 	},
 	config = function()
 		local cmp = require("cmp")
+		local luasnip = require("luasnip")
+		luasnip.config.setup({})
 
 		cmp.setup({
-			completion = {
-				completeopt = "menu,menuone,noinsert",
-			},
 			snippet = {
 				expand = function(args)
-					require("luasnip").lsp_expand(args.body)
+					luasnip.lsp_expand(args.body)
 				end,
 			},
+
+			completion = { completeopt = "menu,menuone,noinsert" },
 
 			formatting = {
 				format = function(_, item)
@@ -71,19 +72,16 @@ return {
 			},
 
 			mapping = cmp.mapping.preset.insert({
-				["<C-k>"] = cmp.mapping.select_prev_item(),
 				["<C-j>"] = cmp.mapping.select_next_item(),
-				["<C-e>"] = cmp.mapping.close(),
-				["<CR>"] = cmp.mapping.confirm({
-					select = true,
-				}),
+				["<C-k>"] = cmp.mapping.select_prev_item(),
+				["<CR>"] = cmp.mapping.confirm({ select = true }),
 			}),
 
 			sources = {
 				{ name = "nvim_lsp" },
-				{ name = "buffer" },
 				{ name = "luasnip" },
 				{ name = "path" },
+				{ name = "buffer" },
 			},
 		})
 	end,
