@@ -1,6 +1,5 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	event = "VeryLazy",
 	build = ":TSUpdate",
 	config = function()
 		require("nvim-treesitter.configs").setup({
@@ -28,8 +27,6 @@ return {
 				enable = true,
 				use_languagetree = true,
 			},
-
-			indent = { enable = true },
 
 			incremental_selection = {
 				enable = true,
