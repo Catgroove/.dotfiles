@@ -2,7 +2,6 @@ return {
 	-- Comments
 	{
 		"echasnovski/mini.comment",
-		event = "VeryLazy",
 		opts = {
 			options = {
 				custom_commentstring = function()
@@ -15,7 +14,6 @@ return {
 	-- JSX-aware comments
 	{
 		"JoosepAlviste/nvim-ts-context-commentstring",
-		lazy = true,
 		opts = {
 			enable_autocmd = false,
 		},
@@ -44,7 +42,6 @@ return {
 	-- Auto tagging for HTML/JSX
 	{
 		"windwp/nvim-ts-autotag",
-		event = "VeryLazy",
 		opts = {
 			enable_close_on_slash = false,
 		},
@@ -52,7 +49,6 @@ return {
 	-- Surround
 	{
 		"echasnovski/mini.surround",
-		event = "VeryLazy",
 		opts = {},
 	},
 	-- Go specific helper commands
