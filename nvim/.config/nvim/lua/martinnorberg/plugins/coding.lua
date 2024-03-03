@@ -49,20 +49,18 @@ return {
 			enable_close_on_slash = false,
 		},
 	},
+	-- Surround
+	{
+		"echasnovski/mini.surround",
+		event = "VeryLazy",
+		opts = {},
+	},
 	-- Go specific helper commands
 	{
 		"olexsmir/gopher.nvim",
 		ft = "go",
 		build = function()
 			vim.cmd([[silent! GoInstallDeps]])
-		end,
-	},
-	-- Surround
-	{
-		"echasnovski/mini.surround",
-		event = "VeryLazy",
-		config = function()
-			require("mini.surround").setup()
 		end,
 	},
 }
