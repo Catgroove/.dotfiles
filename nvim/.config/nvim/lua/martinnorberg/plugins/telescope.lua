@@ -19,6 +19,17 @@ return {
 				find_files = { hidden = true },
 			},
 			defaults = {
+				vimgrep_arguments = {
+					"rg",
+					"-L",
+					"--color=never",
+					"--no-heading",
+					"--with-filename",
+					"--line-number",
+					"--column",
+					"--smart-case",
+					"--hidden",
+				},
 				prompt_prefix = "   ",
 				selection_caret = "  ",
 				sorting_strategy = "ascending",
