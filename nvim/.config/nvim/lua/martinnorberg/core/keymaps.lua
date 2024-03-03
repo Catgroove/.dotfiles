@@ -6,13 +6,6 @@ vim.g.mapleader = " "
 -- alternate file
 keymap.set("n", "<leader>w", "<c-^>")
 
--- telescope
-keymap.set("n", "<leader>fs", "<cmd> Telescope find_files hidden=true <CR>")
-keymap.set("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
-keymap.set("n", "<leader>fg", "<cmd> Telescope live_grep <CR>")
-keymap.set("n", "<leader>fw", "<cmd> Telescope grep_string <CR>")
-keymap.set("n", "<leader>fd", "<cmd> Telescope diagnostics <CR>")
-
 -- paste yank with newline, inline
 keymap.set("x", "<leader>p", '"_dP')
 

@@ -1,61 +1,51 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	tag = "0.1.4",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	event = "VimEnter",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		{
+			"nvim-telescope/telescope-fzf-native.nvim",
+			build = "make",
+			cond = function()
+				return vim.fn.executable("make") == 1
+			end,
+		},
+		"nvim-telescope/telescope-ui-select.nvim",
+		"nvim-tree/nvim-web-devicons",
+	},
 	config = function()
 		require("telescope").setup({
+			pickers = {
+				find_files = { hidden = true },
+			},
 			defaults = {
-				vimgrep_arguments = {
-					"rg",
-					"-L",
-					"--color=never",
-					"--no-heading",
-					"--with-filename",
-					"--line-number",
-					"--column",
-					"--smart-case",
-					"--hidden",
-				},
 				prompt_prefix = "   ",
 				selection_caret = "  ",
-				entry_prefix = "  ",
-				initial_mode = "insert",
-				selection_strategy = "reset",
 				sorting_strategy = "ascending",
-				layout_strategy = "horizontal",
 				layout_config = {
 					horizontal = {
 						prompt_position = "top",
-						preview_width = 0.55,
-						results_width = 0.8,
 					},
-					vertical = {
-						mirror = false,
-					},
-					width = 0.87,
-					height = 0.80,
-					preview_cutoff = 120,
 				},
-				file_sorter = require("telescope.sorters").get_fuzzy_file,
-				file_ignore_patterns = { "node_modules", ".git", "generated" },
-				generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
-				path_display = { "truncate" },
-				winblend = 0,
-				border = {},
-				borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
-				color_devicons = true,
-				set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
-				file_previewer = require("telescope.previewers").vim_buffer_cat.new,
-				grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
-				qflist_previewer = require("telescope.previewers").vim_buffer_qflist.new,
-				-- Developer configurations: Not meant for general override
-				buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
 				mappings = {
 					n = { ["q"] = require("telescope.actions").close },
 				},
+				file_ignore_patterns = { ".git", "node_modules" },
 			},
-
-			extensions_list = { "themes", "terms" },
+			extensions = {
+				["ui-select"] = {
+					require("telescope.themes").get_dropdown(),
+				},
+			},
 		})
+
+		pcall(require("telescope").load_extension, "fzf")
+		pcall(require("telescope").load_extension, "ui-select")
+
+		local builtin = require("telescope.builtin")
+		vim.keymap.set("n", "<leader>fs", builtin.find_files, { desc = "[F]ind [F]iles" })
+		vim.keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "[F]ind [O]ld Files" })
+		vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "[F]ind with [G]rep" })
+		vim.keymap.set("n", "<leader>fw", builtin.grep_string, { desc = "[F]ind current [W]ord" })
 	end,
 }
