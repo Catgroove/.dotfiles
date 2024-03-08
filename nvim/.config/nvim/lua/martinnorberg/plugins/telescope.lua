@@ -17,6 +17,7 @@ return {
 		require("telescope").setup({
 			pickers = {
 				find_files = { hidden = true },
+				oldfiles = { cwd = vim.loop.cwd() },
 			},
 			defaults = {
 				vimgrep_arguments = {
