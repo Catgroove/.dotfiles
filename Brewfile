@@ -7,6 +7,7 @@ cask 'font-fira-code-nerd-font'
 # apps
 cask 'alacritty'
 cask 'arc'
+cask 'obsidian'
 brew 'gh'
 brew 'tmux'
 brew 'lazygit'
