@@ -4,6 +4,8 @@ starship init fish | source
 zoxide init fish | source
 direnv hook fish | source
 
+source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
+
 set -g fish_user_paths "$HOME/bin" $fish_user_paths
 set -U fish_greeting
 set -U fish_key_bindings fish_default_key_bindings
