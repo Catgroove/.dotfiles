@@ -31,6 +31,7 @@ brew 'pnpm'
 brew 'direnv'
 brew 'golang-migrate'
 brew 'coreutils'
+brew 'skaffold'
 
 # languages
 brew 'node'
