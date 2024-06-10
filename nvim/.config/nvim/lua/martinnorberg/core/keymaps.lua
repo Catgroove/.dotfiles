@@ -22,6 +22,9 @@ keymap.set("n", "<leader>cp", vim.cmd.cprev)
 keymap.set("n", "<leader>co", vim.cmd.copen)
 keymap.set("n", "<leader>cc", vim.cmd.cclose)
 
+-- toggle auto format
+keymap.set("n", "<leader>uf", "<cmd> ToggleFormat<CR>")
+
 -- jump to next match, replace and start editing
 keymap.set("n", "<leader><tab>", "gnc")
 
