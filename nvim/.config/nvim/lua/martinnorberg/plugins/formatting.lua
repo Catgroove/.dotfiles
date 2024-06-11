@@ -35,7 +35,7 @@ return {
 		},
 	},
 	init = function()
-		vim.api.nvim_create_autocmd("BufEnter", {
+		vim.api.nvim_create_autocmd("BufRead", {
 			callback = function(args)
 				vim.b[args.buf].format_on_save = true
 			end,
