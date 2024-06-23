@@ -1,0 +1,101 @@
+import = ["/Users/martinnorberg/catppuccin/catppuccin-mocha.toml"]
+
+[font]
+size = 20
+
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "FiraCode Nerd Font"
+style = "Bold Italir"
+
+[font.italic]
+family = "FiraCode Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Regular"
+
+[[keyboard.bindings]]
+chars = "\u0001f"
+key = "F"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0001v"
+key = "J"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001v"
+key = "K"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001-"
+key = "H"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001g"
+key = "G"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001-"
+key = "L"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001m"
+key = "M"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = """
+\u001B:w
+"""
+key = "S"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001c"
+key = "T"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001x"
+key = "W"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001L"
+key = "Minus"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001s"
+key = "Minus"
+mods = "Command|Shift"
+
+[[keyboard.bindings]]
+chars = "\u0001n"
+key = "Period"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001p"
+key = "Comma"
+mods = "Command"
+
+[window]
+decorations = "buttonless"
+"dynamic padding" = false
+startup_mode = "Maximized"
+
+[window.padding]
+x = 18
+y = 16
