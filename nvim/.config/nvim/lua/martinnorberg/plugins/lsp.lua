@@ -98,6 +98,9 @@ return {
 				-- js/ts
 				"prettierd",
 				"eslint_d",
+
+				-- proto
+				"buf-language-server",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
