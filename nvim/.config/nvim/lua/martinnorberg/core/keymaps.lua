@@ -54,9 +54,6 @@ keymap.set("n", "G", "Gzz")
 keymap.set("n", "H", "^")
 keymap.set("n", "L", "$")
 
--- tmux-sessionizer
-keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-
 -- quick search and replace on word
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 

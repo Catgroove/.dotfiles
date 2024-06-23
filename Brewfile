@@ -32,6 +32,7 @@ brew 'direnv'
 brew 'golang-migrate'
 brew 'coreutils'
 brew 'skaffold'
+brew 'joshmedeski/sesh/sesh'
 
 # languages
 brew 'node'

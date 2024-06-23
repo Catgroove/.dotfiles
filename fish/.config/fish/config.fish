@@ -21,18 +21,16 @@ abbr kcc "kubectl config current-context"
 abbr kdev "kubectl config use-context gke_ingrid-head_europe-west1-b_development-v2"
 abbr kstage "kubectl config use-context gke_ingrid-head_europe-west1-b_stage-v2"
 abbr kprod "kubectl config use-context gke_ingrid-head_europe-west1-b_production-v2"
-abbr kops "kubectl config use-context gke_hyper-cloud_europe-west1-b_ops-v3"
+abbr kops "kubectl config use-context gke_hyper-cloud_europe-west2-b_ops-v3"
 
 abbr l "exa -l --icons --git -a"
-abbr lt "exa --tree --level=2 --long --icons --git"
+abbr lt "exa --tree --level=3 --long --icons --git"
 
 abbr ports "sudo lsof -iTCP -sTCP:LISTEN -n -P"
 
-abbr s "secret"
+abbr s "sesh connect \"\$(sesh list -i | gum filter --limit 1 --fuzzy --no-sort --placeholder 'Pick a sesh' --prompt='⚡')\""
+
+abbr sec "secret"
 abbr t "debug_trace"
 
 abbr vim "nvim"
-
-# binds
-bind -e \cF
-bind \cF "tmux-sessionizer"
