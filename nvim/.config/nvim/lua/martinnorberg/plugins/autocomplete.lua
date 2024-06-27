@@ -6,6 +6,9 @@ return {
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
 
+		-- Icons
+		"onsails/lspkind.nvim",
+
 		-- LSP completion capabilities
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-path",
@@ -14,6 +17,8 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
+		local lspkind = require("lspkind")
+
 		luasnip.config.setup({})
 
 		cmp.setup({
@@ -26,49 +31,11 @@ return {
 			completion = { completeopt = "menu,menuone,noinsert" },
 
 			formatting = {
-				format = function(_, item)
-					local icons = {
-						Array = " ",
-						Boolean = " ",
-						Class = " ",
-						Color = " ",
-						Constant = " ",
-						Constructor = " ",
-						Copilot = " ",
-						Enum = " ",
-						EnumMember = " ",
-						Event = " ",
-						Field = " ",
-						File = " ",
-						Folder = " ",
-						Function = " ",
-						Interface = " ",
-						Key = " ",
-						Keyword = " ",
-						Method = " ",
-						Module = " ",
-						Namespace = " ",
-						Null = "ﳠ ",
-						Number = " ",
-						Object = " ",
-						Operator = " ",
-						Package = " ",
-						Property = " ",
-						Reference = " ",
-						Snippet = " ",
-						String = " ",
-						Struct = " ",
-						Text = " ",
-						TypeParameter = " ",
-						Unit = " ",
-						Value = " ",
-						Variable = " ",
-					}
-					if icons[item.kind] then
-						item.kind = icons[item.kind] .. item.kind
-					end
-					return item
-				end,
+				format = lspkind.cmp_format({
+					mode = "symbol_text",
+					maxwidth = 50,
+					ellipsis_char = "...",
+				}),
 			},
 
 			mapping = cmp.mapping.preset.insert({
