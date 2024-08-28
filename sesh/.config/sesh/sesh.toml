@@ -1,2 +1,7 @@
 [default_session]
 startup_command = "nvim"
+
+[[session]]
+name = "repos"
+path = "~/repos"
+startup_command = " "
