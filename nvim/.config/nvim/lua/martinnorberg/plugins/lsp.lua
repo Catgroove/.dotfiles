@@ -65,7 +65,7 @@ return {
 						},
 					},
 				},
-				tsserver = {
+				ts_ls = {
 					commands = {
 						OrganizeImports = {
 							function()
