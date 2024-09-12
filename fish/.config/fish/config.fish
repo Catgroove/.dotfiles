@@ -12,6 +12,7 @@ set -U fish_key_bindings fish_default_key_bindings
 
 set -x GOPATH (go env GOPATH)
 set -x PATH $PATH $GOPATH/bin
+set -x PATH $PATH $HOME/Library/Python/3.9/bin
 set -gx GOPRIVATE "github.com/shipwallet/*"
 
 # abbrs
