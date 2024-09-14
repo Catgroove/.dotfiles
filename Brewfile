@@ -16,6 +16,7 @@ brew 'k9s'
 brew 'grpcui'
 brew 'withgraphite/tap/graphite'
 brew 'grpcui'
+brew 'aerospace'
 
 # cli
 brew 'fish'
