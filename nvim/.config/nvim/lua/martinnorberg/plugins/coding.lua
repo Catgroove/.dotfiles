@@ -18,27 +18,36 @@ return {
 			enable_autocmd = false,
 		},
 	},
-	-- Harpoon
+	-- Arrow
 	{
-		"ThePrimeagen/harpoon",
-		config = function()
-			local mark = require("harpoon.mark")
-			local ui = require("harpoon.ui")
-
-			vim.keymap.set("n", "<leader>ha", mark.add_file)
-			vim.keymap.set("n", "<leader>ho", ui.toggle_quick_menu)
-
-            --stylua: ignore start
-            vim.keymap.set("n", "<leader>1", function() ui.nav_file(1) end)
-            vim.keymap.set("n", "<leader>2", function() ui.nav_file(2) end)
-            vim.keymap.set("n", "<leader>3", function() ui.nav_file(3) end)
-            vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
-            vim.keymap.set("n", "<leader>5", function() ui.nav_file(5) end)
-			--stylua: ignore end
-
-			require("harpoon").setup({})
-		end,
+		"otavioschwanck/arrow.nvim",
+		opts = {
+			show_icons = true,
+			leader_key = "-",
+			buffer_leadey_key = "ö",
+		},
 	},
+	-- -- Harpoon
+	-- {
+	-- 	"ThePrimeagen/harpoon",
+	-- 	config = function()
+	-- 		local mark = require("harpoon.mark")
+	-- 		local ui = require("harpoon.ui")
+	--
+	-- 		vim.keymap.set("n", "<leader>ha", mark.add_file)
+	-- 		vim.keymap.set("n", "<leader>ho", ui.toggle_quick_menu)
+	--
+	--            --stylua: ignore start
+	--            vim.keymap.set("n", "<leader>1", function() ui.nav_file(1) end)
+	--            vim.keymap.set("n", "<leader>2", function() ui.nav_file(2) end)
+	--            vim.keymap.set("n", "<leader>3", function() ui.nav_file(3) end)
+	--            vim.keymap.set("n", "<leader>4", function() ui.nav_file(4) end)
+	--            vim.keymap.set("n", "<leader>5", function() ui.nav_file(5) end)
+	-- 		--stylua: ignore end
+	--
+	-- 		require("harpoon").setup({})
+	-- 	end,
+	-- },
 	-- Auto tagging for HTML/JSX
 	{
 		"windwp/nvim-ts-autotag",
