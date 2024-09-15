@@ -51,3 +51,9 @@ opt.smartcase = true
 
 -- scrolloff
 opt.scrolloff = 8
+
+-- disable swapfile
+opt.swapfile = false
+
+-- autoread buffes automatically
+opt.autoread = true
