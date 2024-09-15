@@ -23,8 +23,8 @@ return {
 		"otavioschwanck/arrow.nvim",
 		opts = {
 			show_icons = true,
-			leader_key = "-",
-			buffer_leadey_key = "ö",
+			leader_key = "ö",
+			buffer_leadey_key = "-",
 		},
 	},
 	-- -- Harpoon
