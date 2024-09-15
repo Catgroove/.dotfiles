@@ -119,7 +119,7 @@ cmd-ctrl-shift-equal = 'resize smart +50'
 # cmd-ctrl-9 = 'workspace 9'
 cmd-ctrl-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
 cmd-ctrl-b = 'workspace B'
-cmd-ctrl-c = 'workspace C'
+# cmd-ctrl-c = 'workspace C'
 cmd-ctrl-d = 'workspace D'
 cmd-ctrl-e = 'workspace E'
 cmd-ctrl-f = 'workspace F'
@@ -141,7 +141,7 @@ cmd-ctrl-y = 'workspace Y'
 cmd-ctrl-z = 'workspace Z'
 
 
-# See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
+# See: https://nikitabobko.github.io/AeroSpace/ccom.electron.dockerdesktopommands#move-node-to-workspace
 # cmd-ctrl-shift-1 = 'move-node-to-workspace 1'
 # cmd-ctrl-shift-2 = 'move-node-to-workspace 2'
 # cmd-ctrl-shift-3 = 'move-node-to-workspace 3'
@@ -153,7 +153,7 @@ cmd-ctrl-z = 'workspace Z'
 # cmd-ctrl-shift-9 = 'move-node-to-workspace 9'
 cmd-ctrl-shift-a = 'move-node-to-workspace A'
 cmd-ctrl-shift-b = 'move-node-to-workspace B'
-cmd-ctrl-shift-c = 'move-node-to-workspace C'
+# cmd-ctrl-shift-c = 'move-node-to-workspace C'
 cmd-ctrl-shift-d = 'move-node-to-workspace D'
 cmd-ctrl-shift-e = 'move-node-to-workspace E'
 cmd-ctrl-shift-f = 'move-node-to-workspace F'
@@ -216,4 +216,8 @@ run = "move-node-to-workspace D"
 
 [[on-window-detected]]
 if.app-id = 'com.electron.dockerdesktop'
+run = ["layout floating"]
+
+[[on-window-detected]]
+if.app-id = 'com.1password.1password'
 run = ["layout floating"]
