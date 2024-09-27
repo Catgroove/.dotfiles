@@ -68,4 +68,9 @@ return {
 			vim.cmd([[silent! GoInstallDeps]])
 		end,
 	},
+	{
+		"echasnovski/mini.ai",
+		version = "*",
+		opts = {},
+	},
 }
