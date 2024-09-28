@@ -9,9 +9,6 @@ keymap.set("n", "<leader>w", "<c-^>")
 -- paste yank with newline, inline
 keymap.set("x", "<leader>p", '"_dP')
 
--- spectre
-keymap.set("n", "<leader>S", "<cmd> lua require('spectre').toggle() <CR>")
-
 -- move through wrapped lines
 keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })

@@ -1,4 +1,7 @@
 return {
+	-- Copilot
+	"github/copilot.vim",
+
 	-- Comments
 	{
 		"echasnovski/mini.comment",
@@ -11,6 +14,7 @@ return {
 			},
 		},
 	},
+
 	-- JSX-aware comments
 	{
 		"JoosepAlviste/nvim-ts-context-commentstring",
@@ -18,6 +22,7 @@ return {
 			enable_autocmd = false,
 		},
 	},
+
 	-- Arrow
 	{
 		"otavioschwanck/arrow.nvim",
@@ -27,6 +32,7 @@ return {
 			buffer_leadey_key = "-",
 		},
 	},
+
 	-- -- Harpoon
 	-- {
 	-- 	"ThePrimeagen/harpoon",
@@ -48,6 +54,7 @@ return {
 	-- 		require("harpoon").setup({})
 	-- 	end,
 	-- },
+
 	-- Auto tagging for HTML/JSX
 	{
 		"windwp/nvim-ts-autotag",
@@ -55,11 +62,13 @@ return {
 			enable_close_on_slash = false,
 		},
 	},
+
 	-- Surround
 	{
 		"echasnovski/mini.surround",
 		opts = {},
 	},
+
 	-- Go specific helper commands
 	{
 		"olexsmir/gopher.nvim",
@@ -68,6 +77,7 @@ return {
 			vim.cmd([[silent! GoInstallDeps]])
 		end,
 	},
+	-- Better textobjects
 	{
 		"echasnovski/mini.ai",
 		version = "*",
