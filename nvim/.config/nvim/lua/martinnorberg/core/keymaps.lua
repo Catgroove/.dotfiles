@@ -2,6 +2,7 @@ local keymap = vim.keymap
 
 -- core
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 -- alternate file
 keymap.set("n", "<leader>w", "<c-^>")
