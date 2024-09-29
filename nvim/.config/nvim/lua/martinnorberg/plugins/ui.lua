@@ -62,7 +62,26 @@ return {
 			},
 			sections = {
 				lualine_a = { "mode" },
-				lualine_b = { "branch" },
+				lualine_b = {
+					"branch",
+					function()
+						local harpoon = require("harpoon")
+
+						local length = #harpoon:list().items
+						if length == 0 then
+							return ""
+						end
+
+						local mark = "-"
+						local _, current_index = harpoon:list():get_by_value(vim.fn.expand("%"))
+
+						if current_index ~= nil then
+							mark = tostring(current_index)
+						end
+
+						return string.format("󱡅 %s/%d", mark, length)
+					end,
+				},
 				lualine_c = {
 					{ "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
 					{ "filename", path = 1, symbols = { modified = "  ", readonly = "", unnamed = "" } },
