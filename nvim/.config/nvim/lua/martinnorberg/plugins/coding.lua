@@ -1,7 +1,4 @@
 return {
-	-- Copilot
-	"github/copilot.vim",
-
 	-- Comments
 	{
 		"echasnovski/mini.comment",
