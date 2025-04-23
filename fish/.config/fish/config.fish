@@ -22,7 +22,7 @@ abbr kcc "kubectl config current-context"
 abbr kdev "kubectl config use-context gke_ingrid-head_europe-west1-b_development-v2"
 abbr kstage "kubectl config use-context gke_ingrid-head_europe-west1-b_stage-v2"
 abbr kprod "kubectl config use-context gke_ingrid-head_europe-west1-b_production-v2"
-abbr kops "kubectl config use-context gke_hyper-cloud_europe-west2-b_ops-v3"
+abbr kops "kubectl config use-context gke_hyper-cloud_europe-west1-b_ops-v3"
 
 abbr l "exa -l --icons --git -a"
 abbr lt "exa --tree --level=3 --long --icons --git"
