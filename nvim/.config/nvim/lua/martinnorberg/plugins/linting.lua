@@ -14,21 +14,12 @@ return {
 			javascriptreact = { "eslint_d" },
 		}
 
-		local root_patterns_by_linter = {
-			eslint_d = { ".eslintrc.json", ".eslintrc", ".eslintrc.yml", "package.json" },
-		}
-
 		local M = {}
 
 		function M.lint()
-			for linter, patterns in pairs(root_patterns_by_linter) do
-				local path = patterns and vim.fs.root(0, patterns)
-				if path then
-					lint.linters[linter].cwd = path
-				end
-			end
-
-			lint.try_lint()
+			local get_clients = vim.lsp.get_clients or vim.lsp.buf_active_clients
+			local client = get_clients({ bufnr = 0 })[1] or {}
+			lint.try_lint(nil, { cwd = client.root_dir })
 		end
 
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
