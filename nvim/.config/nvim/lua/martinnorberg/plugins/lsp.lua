@@ -101,7 +101,7 @@ return {
 				"eslint_d",
 
 				-- proto
-				"buf-language-server",
+				"buf",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 

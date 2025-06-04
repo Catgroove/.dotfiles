@@ -21,6 +21,7 @@ return {
 				"gitignore",
 				"proto",
 				"sql",
+				"http",
 			},
 
 			highlight = {

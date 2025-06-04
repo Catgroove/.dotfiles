@@ -25,6 +25,9 @@ return {
 			json = { "prettierd" },
 			html = { "prettierd" },
 			css = { "prettierd" },
+
+			-- proto
+			proto = { "buf" },
 		},
 		formatters = {
 			goimportstidy = {
