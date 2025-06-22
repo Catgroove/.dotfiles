@@ -22,6 +22,9 @@ return {
 				"proto",
 				"sql",
 				"http",
+				"gotmpl",
+				"gomod",
+				"gosum",
 			},
 
 			highlight = {
@@ -37,6 +40,12 @@ return {
 					scope_incremental = "<c-s>",
 					node_decremental = "<M-space>",
 				},
+			},
+		})
+
+		vim.filetype.add({
+			extension = {
+				tmpl = "gotmpl",
 			},
 		})
 	end,

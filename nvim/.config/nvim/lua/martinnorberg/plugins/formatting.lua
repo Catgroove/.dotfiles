@@ -4,7 +4,7 @@ return {
 		format_on_save = function(bufnr)
 			if vim.b[bufnr].format_on_save then
 				return {
-					timeout_ms = 10000,
+					timeout_ms = 500,
 					lsp_fallback = true,
 				}
 			end
