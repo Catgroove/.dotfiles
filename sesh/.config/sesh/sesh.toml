@@ -4,4 +4,4 @@ startup_command = "nvim"
 [[session]]
 name = "repos"
 path = "~/repos"
-startup_command = " "
+disable_startup_command = true
