@@ -3,7 +3,6 @@ tap 'go-swagger/go-swagger'
 # fonts
 cask 'font-fira-code-nerd-font'
 
-
 # apps
 cask 'alacritty'
 cask 'arc'
@@ -22,8 +21,6 @@ brew 'slides'
 # cli
 brew 'fish'
 brew 'fzf'
-brew 'exa'
-brew 'bat'
 brew 'ripgrep'
 brew 'zoxide'
 brew 'starship'
@@ -35,7 +32,6 @@ brew 'golang-migrate'
 brew 'coreutils'
 brew 'skaffold'
 brew 'joshmedeski/sesh/sesh'
-brew 'act'
 
 # languages
 brew 'node'
