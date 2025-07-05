@@ -17,6 +17,11 @@ set -x PATH $PATH $GOPATH/bin
 set -x PATH $PATH $HOME/Library/Python/3.9/bin
 set -gx GOPRIVATE "github.com/shipwallet/*"
 
+# copy and paste using sytem clipboard
+bind -M visual y fish_clipboard_copy
+bind -M normal yy fish_clipboard_copy
+bind p fish_clipboard_paste
+
 # abbrs
 abbr c clear
 
