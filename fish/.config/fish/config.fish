@@ -34,6 +34,8 @@ abbr kops "kubectl config use-context gke_hyper-cloud_europe-west1-b_ops-v3"
 abbr ports "sudo lsof -iTCP -sTCP:LISTEN -n -P"
 
 abbr s "sesh connect \"\$(sesh list -i | gum filter --limit 1 --fuzzy --no-sort --placeholder 'Pick a sesh' --prompt='⚡')\""
+abbr sc "sesh clone --cmdDir ~/repos (pbpaste)"
+
 
 abbr sec "secret"
 abbr t "debug_trace"
