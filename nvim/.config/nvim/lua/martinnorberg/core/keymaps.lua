@@ -26,8 +26,8 @@ keymap.set("n", "<leader>uf", "<cmd> ToggleFormat<CR>")
 -- jump to next match, replace and start editing
 keymap.set("n", "<leader><tab>", "gnc")
 
--- nvim-tree
-keymap.set("n", "<leader>fe", "<cmd> NvimTreeToggle <CR>")
+-- -- nvim-tree
+-- keymap.set("n", "<leader>fe", "<cmd> NvimTreeToggle <CR>")
 
 -- move in visual mode
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
