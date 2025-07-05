@@ -13,7 +13,7 @@ return {
 			{
 				"-",
 				function()
-					require("oil").open()
+					require("oil").open_float()
 				end,
 				desc = "Open parent directory with oil",
 			},
