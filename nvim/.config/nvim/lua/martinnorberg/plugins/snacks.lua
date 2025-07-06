@@ -1,13 +1,9 @@
 return {
 	"folke/snacks.nvim",
-	priority = 1000,
 	lazy = false,
 	---@type snacks.Config
 	opts = {
-		-- your configuration comes here
-		-- or leave it empty to use the default settings
-		-- refer to the configuration section below
-		-- bigfile = { enabled = true },
+		bigfile = { enabled = true },
 		-- dashboard = { enabled = true },
 		-- explorer = { enabled = true },
 		-- indent = { enabled = true },
@@ -19,5 +15,59 @@ return {
 		-- scroll = { enabled = true },
 		-- statuscolumn = { enabled = true },
 		-- words = { enabled = true },
+		--
+	},
+	keys = {
+		{
+			"<leader>fs",
+			function()
+				Snacks.picker.git_files()
+			end,
+			desc = "[F]ind [F]iles",
+		},
+		{
+			"<leader>fo",
+			function()
+				Snacks.picker.recent()
+			end,
+			desc = "[F]ind [O]ld Files",
+		},
+		{
+			"<leader>fg",
+			function()
+				Snacks.picker.grep()
+			end,
+			desc = "[F]ind with [G]rep",
+		},
+		{
+			"<leader>fw",
+			function()
+				Snacks.picker.grep_word()
+			end,
+			desc = "[F]ind current [W]ord",
+		},
+		{
+			"gd",
+			function()
+				Snacks.picker.lsp_definitions()
+			end,
+			desc = "[G]oto [D]efinition",
+		},
+		{
+			"gr",
+			function()
+				Snacks.picker.lsp_references()
+			end,
+			nowait = true,
+			desc = "[G]oto [R]eferences",
+		},
+		{
+			"gI",
+			function()
+				Snacks.picker.lsp_implementations()
+			end,
+			nowait = true,
+			desc = "[G]oto [I]mplementation",
+		},
 	},
 }

@@ -18,9 +18,6 @@ return {
 					end
 
 					map("n", "<leader>rs", "<cmd>LspRestart<CR>", "[R]e[s]tart LSP")
-					map("n", "gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
-					map("n", "gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
-					map("n", "gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
 					map("n", "K", vim.lsp.buf.hover, "Hover Documentation")
 					map("i", "<C-k>", vim.lsp.buf.signature_help, "Hover documentation")
 					map("n", "<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
