@@ -28,7 +28,7 @@ return {
 		{
 			"<leader>fx",
 			function()
-				Snacks.picker.files()
+				Snacks.picker.git_files()
 			end,
 			desc = "[F]ind Git Files",
 		},
