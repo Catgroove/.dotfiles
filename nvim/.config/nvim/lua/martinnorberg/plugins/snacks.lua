@@ -21,9 +21,16 @@ return {
 		{
 			"<leader>fs",
 			function()
-				Snacks.picker.git_files()
+				Snacks.picker.files()
 			end,
 			desc = "[F]ind [F]iles",
+		},
+		{
+			"<leader>fx",
+			function()
+				Snacks.picker.files()
+			end,
+			desc = "[F]ind Git Files",
 		},
 		{
 			"<leader>fo",
