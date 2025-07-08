@@ -96,6 +96,7 @@ return {
 				-- js/ts
 				"prettierd",
 				"eslint_d",
+				"tailwindcss",
 
 				-- proto
 				"buf",
