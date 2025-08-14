@@ -21,7 +21,7 @@ return {
 		{
 			"<leader>fs",
 			function()
-				Snacks.picker.files()
+				Snacks.picker.files({ hidden = true })
 			end,
 			desc = "[F]ind [F]iles",
 		},
@@ -42,7 +42,7 @@ return {
 		{
 			"<leader>fg",
 			function()
-				Snacks.picker.grep()
+				Snacks.picker.grep({ hidden = true })
 			end,
 			desc = "[F]ind with [G]rep",
 		},
