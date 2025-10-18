@@ -1,46 +1,27 @@
 return {
 	{
 		"mfussenegger/nvim-dap",
-		dependencies = {
-			{
-				"nvim-neotest/nvim-nio",
-			},
-			{
-				"theHamsta/nvim-dap-virtual-text",
-			},
-			{
-				"rcarriga/nvim-dap-ui",
-                --stylua: ignore
-				keys = {
-					{ "<leader>du", function() require("dapui").toggle({}) end },
-				},
-				opts = {},
-				config = function(_, opts)
-					local dap = require("dap")
-					local dapui = require("dapui")
-					dapui.setup(opts)
-					dap.listeners.after.event_initialized["dapui_config"] = function()
-						dapui.open()
-					end
-					dap.listeners.before.event_terminated["dapui_config"] = function()
-						dapui.close()
-					end
-					dap.listeners.before.event_exited["dapui_config"] = function()
-						dapui.close()
-					end
-				end,
-			},
-		},
         -- stylua: ignore
-		keys = {
-			{ "<leader>db", function() require("dap").toggle_breakpoint() end },
-			{ "<leader>dx", function() require("dap").clear_breakpoints() end },
-			{ "<leader>dq", function() require("dap").terminate() end },
-			{ "<leader>dc", function() require("dap").continue() end },
-			{ "<leader>di", function() require("dap").step_into() end },
-			{ "<leader>do", function() require("dap").step_over() end },
-			{ "<leader>dO", function() require("dap").step_out() end },
-		},
+        config = function ()
+          local sidebar
+          local widgets = require("dap.ui.widgets")
+
+          vim.keymap.set("n", "<leader>du", function()
+            if sidebar == nil then
+              sidebar = widgets.sidebar(widgets.scopes)
+            end
+            sidebar.toggle()
+          end, { desc = "Toggle DAP UI" })
+
+          vim.keymap.set("n", "<leader>db", function() require("dap").toggle_breakpoint() end, { desc = "Toggle Breakpoint" })
+          vim.keymap.set("n", "<leader>dx", function() require("dap").clear_breakpoints() end, { desc = "Clear Breakpoints" })
+          vim.keymap.set("n", "<leader>dt", function() require("dap").terminate() end, { desc = "Terminate/Quit DAP" })
+          vim.keymap.set("n", "<leader>dq", function() require("dap").disconnect() end, { desc = "Terminate/Quit DAP" })
+          vim.keymap.set("n", "<leader>dc", function() require("dap").continue() end, { desc = "Continue" })
+          vim.keymap.set("n", "<leader>di", function() require("dap").step_into() end, { desc = "Step Into" })
+          vim.keymap.set("n", "<leader>do", function() require("dap").step_over() end, { desc = "Step Over" })
+          vim.keymap.set("n", "<leader>dO", function() require("dap").step_out() end, { desc = "Step Out" })
+        end,
 	},
 	{
 		"leoluz/nvim-dap-go",
