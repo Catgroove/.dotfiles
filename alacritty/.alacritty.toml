@@ -1,4 +1,4 @@
-import = ["/Users/martinnorberg/catppuccin/catppuccin-mocha.toml"]
+general.import = ["/Users/martinnorberg/catppuccin/catppuccin-mocha.toml"]
 
 [font]
 size = 20
@@ -42,6 +42,11 @@ mods = "Command"
 [[keyboard.bindings]]
 chars = "\u0001g"
 key = "G"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001t"
+key = "A"
 mods = "Command"
 
 [[keyboard.bindings]]
