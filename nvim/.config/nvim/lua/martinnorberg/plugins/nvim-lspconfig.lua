@@ -91,6 +91,9 @@ return {
 				"eslint_d",
 				"tailwindcss",
 
+				-- typespec
+				"tsp-server",
+
 				-- proto
 				"buf",
 			})

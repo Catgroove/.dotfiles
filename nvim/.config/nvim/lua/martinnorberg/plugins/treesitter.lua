@@ -25,6 +25,7 @@ return {
 				"gotmpl",
 				"gomod",
 				"gosum",
+				"typespec",
 			},
 
 			highlight = {
