@@ -19,6 +19,26 @@ success_symbol = "[❯](maroon)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
+[kubernetes]
+disabled = false
+symbol = "☸ "
+style = "bold blue"
+
+[[kubernetes.contexts]]
+context_pattern = "gke_ingrid-head_europe-west1-b_production-v2"
+context_alias = "prod"
+style = "bold red"
+
+[[kubernetes.contexts]]
+context_pattern = "gke_ingrid-head_europe-west1-b_stage-v2"
+context_alias = "staging"
+style = "bold yellow"
+
+[[kubernetes.contexts]]
+context_pattern = "gke_ingrid-head_europe-west1-b_development-v2"
+context_alias = "dev"
+style = "bold green"
+
 [conda]
 symbol = " "
 
