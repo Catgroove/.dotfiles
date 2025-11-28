@@ -31,6 +31,8 @@ abbr ports "sudo lsof -iTCP -sTCP:LISTEN -n -P"
 abbr s "sesh connect \"\$(sesh list -i | gum filter --limit 1 --fuzzy --no-sort --placeholder 'Pick a sesh' --prompt='⚡')\""
 abbr sc "sesh clone --cmdDir ~/repos (pbpaste)"
 
+abbr sql 'cloud-sql-proxy --unix-socket /tmp/cloudsql $(gcloud sql instances list --format="value(connectionName)" --project=ingrid-head | fzf)'
+
 abbr sec "secret"
 abbr t "debug_trace"
 
