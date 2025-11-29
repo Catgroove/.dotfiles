@@ -7,7 +7,7 @@ gui:
   scrollOffMargin: 2 # how many lines to keep before/after the cursor when it reaches the top/bottom of the view; see 'Scroll-off Margin' section below
   scrollOffBehavior: "margin" # one of 'margin' | 'jump'; see 'Scroll-off Margin' section below
   sidePanelWidth: 0.3333 # number from 0 to 1
-  expandFocusedSidePanel: false
+  expandFocusedSidePanel: true
   mainPanelSplitMode: "flexible" # one of 'horizontal' | 'flexible' | 'vertical'
   language: "auto" # one of 'auto' | 'en' | 'zh-CN' | 'zh-TW' | 'pl' | 'nl' | 'ja' | 'ko' | 'ru'
   timeFormat: "02 Jan 06" # https://pkg.go.dev/time#Time.Format
@@ -41,12 +41,12 @@ gui:
   skipDiscardChangeWarning: false
   skipStashWarning: false
   showFileTree: true # for rendering changes files in a tree format
-  showListFooter: true # for seeing the '5 of 20' message in list panels
-  showRandomTip: true
+  showListFooter: false # for seeing the '5 of 20' message in list panels
+  showRandomTip: false
   showBranchCommitHash: false # show commit hashes alongside branch names
-  showBottomLine: true # for hiding the bottom information line (unless it has important information to tell you)
-  showPanelJumps: true # for showing the jump-to-panel keybindings as panel subtitles
-  showCommandLog: true
+  showBottomLine: false # for hiding the bottom information line (unless it has important information to tell you)
+  showPanelJumps: false # for showing the jump-to-panel keybindings as panel subtitles
+  showCommandLog: false
   showIcons: false # deprecated: use nerdFontsVersion instead
   commandLogSize: 8
   splitDiff: "auto" # one of 'auto' | 'always'
@@ -58,6 +58,7 @@ git:
   pagers:
     - colorArg: always
       useConfig: false
+      pager: delta --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
   commit:
     signOff: false
   merging:

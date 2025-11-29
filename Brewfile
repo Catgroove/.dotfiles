@@ -32,6 +32,7 @@ brew 'golang-migrate'
 brew 'coreutils'
 brew 'skaffold'
 brew 'joshmedeski/sesh/sesh'
+brew 'git-delta'
 
 # languages
 brew 'node'
